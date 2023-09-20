@@ -1,0 +1,66 @@
+server:
+  port: 9021
+
+spring:
+  application:
+    name: urlgen
+#  profiles:
+#    active: default
+  config:
+    import: optional:configserver:http://localhost:8071
+  datasource:
+    url: jdbc:mysql://localhost:3306/PDatabase
+    username: root
+    password: Password123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    #    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        dialect:
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+#  logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+logging:
+  level:
+    sql: debug
+    org.springframework.cloud: DEBUG
+    feign: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+endpoints:
+  shutdown:
+    enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8070/eureka/
+
+info:
+  app:
+    name: URL Generator Service
+    description: For generating and persisting urls.
+    version: 1.0.0
+

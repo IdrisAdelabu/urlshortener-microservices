@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/us-user/pom.xml" />
+        <option value="$PROJECT_DIR$/us-qr-gen/pom.xml" />
+        <option value="$PROJECT_DIR$/us-url-gen/pom.xml" />
+        <option value="$PROJECT_DIR$/encryption/pom.xml" />
+        <option value="$PROJECT_DIR$/utilities/pom.xml" />
+        <option value="$PROJECT_DIR$/exception/pom.xml" />
+        <option value="$PROJECT_DIR$/configserver/pom.xml" />
+        <option value="$PROJECT_DIR$/qrgen/pom.xml" />
+        <option value="$PROJECT_DIR$/urlgen/pom.xml" />
+        <option value="$PROJECT_DIR$/eurekaserver/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
