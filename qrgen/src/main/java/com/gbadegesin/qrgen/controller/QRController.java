@@ -39,13 +39,13 @@ public class QRController {
         return encryptionFeignClient.encryptPayload(qrCode);
     }
 
-    public static <T> T toObject(String json, Class<T> clazz) {
-
-        try {
-            return objectMapper.readValue(json, clazz);
-        }catch (Exception e){
-            log.error(e.getMessage(), e);
-            throw new GenericException(e.getLocalizedMessage(), "Couldn't string to object payload", HttpStatus.BAD_REQUEST);
-        }
-    }
+//    public static <T> T toObject(String json, Class<T> clazz) {
+//
+//        try {
+//            return objectMapper.readValue(json, clazz);
+//        }catch (Exception e){
+//            log.error(e.getMessage(), e);
+//            throw new GenericException(e.getLocalizedMessage(), "Couldn't string to object payload", HttpStatus.BAD_REQUEST);
+//        }
+//    }
 }
